@@ -36,7 +36,7 @@ const buttonContainer = document.querySelector('.button-container');
 // });
 
 
-
+// DOM MANIPULATION
 const newEl = document.createElement('div')
 newEl.className = 'newEl';
 const newElText = document.createTextNode('Congratulations on joining the team!');

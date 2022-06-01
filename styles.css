@@ -149,6 +149,11 @@ li{
 
 }
 
+.intro-landing p {
+    width: 50%;
+    line-height: 1.4rem;
+}
+
 .form-section {
     height: 400px;
     width: 100%;
