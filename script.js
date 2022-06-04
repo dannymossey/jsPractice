@@ -2,7 +2,6 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-
 hamburger.addEventListener('click', ()=>{
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
@@ -77,3 +76,59 @@ mutationObserver.observe(infoSection, {
 
 infoSection.children[0].textContent = 'hello';
 
+
+
+
+// load UI Event 
+
+
+// setTimeout(alert, 2000, 'hello');
+
+// function timer(){
+//     setTimeout(loader, 1000);
+// }
+
+// function loader(){
+//     alert('hello');
+// }
+
+// window.addEventListener('load', timer);
+
+
+// form validation
+
+const name = document.getElementById('name')
+const email = document.getElementById('email')
+const number = document.getElementById('phone')
+const form = document.getElementById('form')
+const errorElement = document.getElementById('error')
+
+form.addEventListener('submit', (e) =>{
+    let messages = [];
+    if(name.value === '' || name.value === null){
+        messages.push('name is required')
+    }
+
+    if(number.value.length <= 5){
+        messages.push('Please input your phone number correctly')
+    }
+    if(number.value.length >= 20){
+        messages.push('Too many character for a phone number, input number correctly')
+    }
+
+    if(typeof number.value === "string"){
+        messages.push('Please input your numbers')
+    }
+
+    if(messages.length > 0) {
+        e.preventDefault();
+        errorElement.innerHTML = messages.join(', ');
+
+    }
+
+
+
+    
+
+
+})
