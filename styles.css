@@ -155,11 +155,12 @@ li{
 }
 
 .form-section {
-    height: 400px;
+    height: 500px;
     width: 100%;
     margin: auto;
     background-color: #262626 ;
     color: #fff;
+    position: relative;
 }
 
 form{
@@ -168,15 +169,49 @@ form{
     align-items: center;
     flex-direction: column;
     
+    
 }
 
-input{
-    margin: 1%;
-}
-
-input[value]{
+input::placeholder, textarea::placeholder{
     text-align: center;
 }
+input, textarea{
+    margin: 1%;
+    width: 50%;
+    text-align: center;
+}
+
+#form-button{
+    background-color: dodgerblue;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.2rem;
+    height: 30px;
+    width: 50px;
+    transition: text-decoration 1s linear 0.2s;
+
+}
+
+#form-button:hover{
+    font-size: 1.25rem;
+    text-decoration: underline;
+}
+
+#error{
+    position: absolute;
+    left: 45%;
+    bottom: 5%;
+   
+    
+
+    width: auto;
+    height: auto;
+    
+    text-align: center;
+}
+
 
 @media(max-width: 768px){
     .hamburger{
